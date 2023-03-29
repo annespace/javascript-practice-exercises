@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>01-alert-box</title>
+  </head>
+
+  <body>
+    <div id="alert">
+      Oops, Something went wrong!
+      <button onclick="openAlert('none');" class="btn btn-close">Close</button>
+    </div>
+    <button onclick="openAlert('block');" class="btn">Book tickets</button>
+
+    <script>
+      //document.getElementById('???').??? = '???';
+      function openAlert(value) {
+        document.getElementById("alert").style.display = value;
+      }
+    </script>
+  </body>
+</html>
