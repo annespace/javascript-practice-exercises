@@ -1,11 +1,15 @@
 .black-bg {
+  /* 1. starting point */
   width: 100%;
   height: 100%;
   position: fixed;
   background: rgba(0, 0, 0, 0.5);
   z-index: 5;
   padding: 30px;
-  display: none;
+  /* display: none; */
+  visibility: hidden; /* In UI Animation, display: none; 대신 사용 */
+  opacity: 0;
+  transition: all 0.5s; /* 4. add a transition at starting point */
 }
 
 .white-bg {
@@ -15,5 +19,15 @@
 }
 
 .show-modal {
-  display: block;
+  /* 2. end point */
+  /* display: block; */
+  visibility: visible; /* In UI Animation, display: block; 대신 사용 */
+  opacity: 1;
 }
+
+/* UI Animation - use CSS transitions. js에 많은 일을 시키면 성능이 저하되기 때문에 . . .
+1. starting point
+2. end point
+3. js code 
+4. add a transition at starting point
+*/
