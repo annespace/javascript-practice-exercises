@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>07-dark-mode</title>
+  </head>
+  <nav class="navbar navbar-light bg-light">
+     <div class="container-fluid">
+          <span class="navbar-brand">JSShop</span>
+          <span class="badge bg-dark ms-auto mx-3">Dark 🔄</span>
+          <button class="navbar=toggler" type="button">
+               <span class="navbar-toggler-icon"></span>
+          </button>
+     </div>
+     </nav>
+
+  <script>
+     /** 자료 잠깐 저장하는 var
+     var var_name = 넣을 자료; -> badge 클릭 횟수를 기록해보자 */
+     var count = 0;
+     document.querySelector(".badge").addEventListener("click", function(){
+          count++;
+          if(count % 2 == 1){
+               document.querySelector('.badge').innerHTML = 'Light 🔄'
+          } else if(count % 2 ==0){
+               document.querySelector('.badge').innerHTML = 'Dark 🔄'
+          }
+     });
+
+     /* let can not be redeclared
+     코드 백줄 천줄 짜다보면 .. 같은 변수 이름을 또 사용할 수 있음 -> let 써서 방지 
+     const can not be redeclared, + can not be reassigned
+     */
+  
+    </script>
+  </body>
+</html>
