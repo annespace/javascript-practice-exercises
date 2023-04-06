@@ -24,10 +24,3 @@
   visibility: visible; /* In UI Animation, display: block; 대신 사용 */
   opacity: 1;
 }
-
-/* UI Animation - use CSS transitions. js에 많은 일을 시키면 성능이 저하되기 때문에 . . .
-1. starting point
-2. end point
-3. js code 
-4. add a transition at starting point
-*/
