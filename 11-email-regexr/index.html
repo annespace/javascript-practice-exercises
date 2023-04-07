@@ -12,23 +12,37 @@
     <link rel="stylesheet" href="style.css" />
     <title>11-email-regexr</title>
   </head>
-  <div class="black-bg">
-    <div class="white-bg">
-      <h4>Please sign in</h4>
-      <form action="success.html" name="Form" onsubmit="return validateForm()">
-        <div class="my-3">
-          <input type="text" class="form-control" name="answer_a" id="email" />
-        </div>
-        <div class="my-3">
-          <input type="password" class="form-control" name="answer_b" id="b" />
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="button" class="btn btn-danger" id="close">Close</button>
-      </form>
-    </div>
-  </div>
-
   <body>
+    <div class="black-bg">
+      <div class="white-bg">
+        <h4>Please sign in</h4>
+        <form
+          action="success.html"
+          name="Form"
+          onsubmit="return validateForm()"
+        >
+          <div class="my-3">
+            <input
+              type="text"
+              class="form-control"
+              name="answer_a"
+              id="email"
+            />
+          </div>
+          <div class="my-3">
+            <input
+              type="password"
+              class="form-control"
+              name="answer_b"
+              id="b"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-danger" id="close">Close</button>
+        </form>
+      </div>
+    </div>
+
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <span class="navbar-brand">Navbar</span>
