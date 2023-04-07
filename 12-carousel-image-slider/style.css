@@ -1,0 +1,15 @@
+.slide-container {
+  width: 300vw; /* viewport width 브라우져폭 == 100vw */
+  /* 2. end point 최종화면 */
+  /* transform: translateX(-100vw); */
+  transition: all 1s; /* 4. */
+}
+
+.slide-box {
+  width: 100vw;
+  float: left;
+}
+
+.slide-box img {
+  width: 100%;
+}
