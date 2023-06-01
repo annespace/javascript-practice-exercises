@@ -14,3 +14,19 @@ products.forEach((a, i) => {
         </div>`;
   $(".row").append(template);
 });
+
+$("#more").click(function () {
+  $.get("http://codingapple1.github.io/js/more1.json").done((data) => {
+    console.log(data); //console 출력해서 확인
+    // 카드 layout 생성: 받아온 data수에 맞게 잘 생성됨!
+    data.forEach((a, i) => {
+      var template = `
+    <div class="col-sm-4">
+      <img src="https://via.placeholder.com/600" class="w-100" />
+      <h5>${data[i].title}</h5>
+      <p>Price : ${data[i].price}</p>
+    </div>`;
+      $(".row").append(template);
+    });
+  });
+});
