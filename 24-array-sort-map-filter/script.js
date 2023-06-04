@@ -33,12 +33,29 @@ $("#more").click(function () {
 });
 
 // 여기부터!
+// google 에 object 가 들어있는 array 정렬 어떻게 하는지? -> 요렇게 검색 잘 하기
 $("#price").click(function () {
   products.sort(function (a, b) {
     // a = {}, b = {}
     // return a - b; // = {} - {}, object 두개 빼봤자 아무것도 안 나옴
     return a.price - b.price;
   });
-  console.log(products); // 항상 확인 - 정렬이 됐는지 확인해보자
-  //console 내 가격 순 정렬은 잘 됐지만, html은 그대로임
+  console.log(products); // 항상 확인 - 정렬이 됐는지 확인
+  /* console 로 가격 순 정렬은 잘 됐지만,
+   * html은 그대로이므로, html 생성.
+   */
+
+  $(".row").html(""); // 1. div의 내용 제거
+
+  // 2. products 갯수만큼 카드 생성
+  products.forEach((a, i) => {
+    //a = products 안에 있는 하나 하나의 데이티
+    var template = `
+          <div class="col-sm-4">
+            <img src="https://via.placeholder.com/600" class="w-100" />
+            <h5>${a.title}</h5>
+            <p>Price : ${products[i].price}</p>
+          </div>`;
+    $(".row").append(template);
+  });
 });
