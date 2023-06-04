@@ -49,7 +49,7 @@ $("#price").click(function () {
 
   // 2. products 갯수만큼 카드 생성
   products.forEach((a, i) => {
-    //a = products 안에 있는 하나 하나의 데이티
+    //a = products 안에 있는 하나 하나의 데이타
     var template = `
           <div class="col-sm-4">
             <img src="https://via.placeholder.com/600" class="w-100" />
