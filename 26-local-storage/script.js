@@ -5,18 +5,6 @@ var products = [
   { id: 2, price: 119, title: "Maxi Sundress" },
 ];
 
-/* 데이터를 저장하기 위한 가장 쉬운 공간 - 변수
-변수의 단점? 페이지를 새로고침 할 때마다 리셋됨
-데이터를 영구적으로 저장하기 위해서 변수는 적합하지 않고,
-데이터를 반영구적으로 저장 -> browser 내 저장 공간 이용
-localStorage, sessionStorage - > key : value 형태로 저장 
-IndexedDB -> 구조화된 대용량데이타 저장 
-Cookies -> 보통 로그인정보 저장
-Cache Storage -> 웹사이트 접속 시, html css js 새로 다운받는게 아니라 하드에 저장
-
-*/
-var a = 0;
-
 products.forEach((a, i) => {
   var template = `
               <div class="col-sm-4">
@@ -28,6 +16,18 @@ products.forEach((a, i) => {
   
               </div>`;
   $(".row").append(template);
+});
+
+//JQuery는 모든 버튼에 이벤트리스너 한번에 부착 가능. 제한 없음. 지바스크립트는 한 버튼당 하나의 이벤트 리스너
+$(".add").click(function (e) {
+  var title = $(e.target).siblings("h5").text();
+  if (localStorage.getItem("cart") != null) {
+    var total = JSON.parse(localStorage.getItem("cart"));
+    total.push(title);
+    localStorage.setItem("cart", JSON.stringify(total));
+  } else {
+    localStorage.setItem("cart", JSON.stringify([title]));
+  }
 });
 
 $("#more").click(function () {
